@@ -1,0 +1,435 @@
+*{
+    /*elementos no crecen mas de los que les indico*/
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;    /*para que se mueva con naturalidad entre pestanas*/
+}
+
+/*iniciamos estilo de container*/
+header .container{  /*aqui solo al dejar container se contrae todo pero al poner header al inicio indica que solo el nav*/
+    max-width: 1400px; /*ancho maximo*/
+    margin: auto;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+
+    overflow-x: hidden; /* Impide el desplazamiento horizontal en móvil */
+    
+    
+}
+
+
+
+/*tamano de letra y lista*/
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+li{ font-size: 1.25em;}
+
+/*parte del nav*/
+
+/*es para el menu de arriba*/
+header{
+    background-color: #A8A8A8 ; /*el color de la section*/
+}
+
+/*El logo del header al inicio*/
+header .logo{
+    margin: 0;
+    padding: 25px 30px; /*tamano arriba y a los lados del logo*/
+    font-weight: bold; /*se hace negrita*/
+    color: rgb(83, 12, 150);
+    font-size: 1.6em; /*tamano del logo*/
+}
+
+/*para editar todo en general creo*/
+header .container{
+    display: flex;
+    flex-direction: column; /*se ordene en columna*/
+    align-items: center; /*alinea los contenidos*/
+}
+
+/*para editar el menu*/
+header nav{
+    display: flex;  /*hace que las parttes del nav se pongan en columna*/
+    flex-direction: column; /*se ordene en columna*/
+    text-align: center; /*alinea texto*/
+    padding-bottom: 25px;
+    
+    /*hace que nav sea fijo*/
+    position: sticky;
+    top: 0;
+}
+
+/*header a, es para seleccionar los links del menu*/
+header a{
+    padding: 5px 12px; /*lo hace mas ancho y separa mas los txt del nav*/
+    text-decoration: none; /*subrayado*/
+    font-weight: bold; /*negrita*/
+    color: black; /*color txt*/
+}
+
+header a:hover{
+    color: blueviolet; /*color al pasar eel raton sobrer el*/
+}
+
+/*estilo para escritorio
+osea para que se vea bien en pc*/
+
+@media(min-width: 850px) {
+
+    header{
+       /* position: fixed;  */ /*este hace que la parte de section baje un poco*/
+        width: 100%;    /*extiende la parte de la section*/
+    }
+
+
+    header .container {
+        flex-direction: row;    /*hace que se flexione y se separe el logo con los nav*/
+        justify-content: space-between; /*lo manda al final a la derecha*/
+    }
+
+    header nav{
+        flex-direction: row;    /*hace que este en columnas*/
+        padding-bottom: 0;  /*se hace mas pequeno hacia arriba*/
+        padding-right: 20px;    /*hace que las partes de nav se haga mas a la izquierda*/
+    }
+
+}
+
+/*fin del nav*/
+
+
+
+ /*inicio de section de txt*/
+
+ section {
+    text-align: center; /*centra txt*/
+    padding: 50px 0;    /*lo hace mas grande para abajo y para arriba*/
+    
+ }
+
+ 
+
+  /* Estilos de la sección de los pastores generales */
+  .pastores-generales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Ajustamos la altura del section */
+    background-color: #3483C3;
+    
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    background-color: #A8A8A8;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Aumentamos el espacio dentro de la tarjeta */
+  }
+
+  .card img {
+    width: 550px; /* Aumentamos el ancho de la imagen */
+      height: 350px; /* Aumentamos el alto de la imagen */
+      object-fit: cover;
+    margin-right: 30px; /* Mayor separación de la imagen a la esquina */
+  }
+
+  .card-content {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .card-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .card-content p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .pastores-generales {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .card img {
+      width: 150px; /* Reducimos el ancho de la imagen en móvil */
+      height: 150px; /* Reducimos el alto de la imagen en móvil */
+      margin-right: 0;
+      margin-bottom: 10px; /* Ajustamos el margen inferior de la imagen en móvil */
+    }
+
+    .card {
+      width: 90%;
+      padding: 10px; /* Ajustamos el padding en móvil */
+    }
+
+    .card-content h2 {
+      font-size: 20px; /* Reducimos el tamaño de la fuente en móvil */
+      margin-bottom: 5px; /* Ajustamos el margen inferior en móvil */
+    }
+
+    .card-content p {
+      font-size: 14px; /* Reducimos el tamaño de la fuente en móvil */
+    }
+  }
+
+ .quienes-somos {
+    background-color: rgb(236, 19, 19);  /*cambia color de fondo*/
+    color: black;   /*color de la fuente*/
+    /* Permite que la sección se expanda más verticalmente */
+    min-height: 300px;
+
+    position: relative;
+    background-color: white;
+    color: black;
+    padding: 90px;/*hace mas grande el section*/
+    width: 100vw; /* Ancho de la sección en viewport width */
+    text-align: center;
+    overflow: hidden; /* Evitar que la marca de agua desborde */
+
+}
+
+   /* Estilo de la marca de agua */
+   .marca-agua {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    opacity: 0.2; /* Ajusta la opacidad para mezclar la marca de agua */
+    pointer-events: none; /* Evitar que la imagen de la marca de agua sea interactiva */
+}
+
+.quienes-somos h2{
+    font-size: 30px;
+    font-weight: bold;  /*se hace negrita*/
+}
+
+.quienes-somos p{
+    font-size: 22px;
+    font-weight: bold;  /*se hace negrita*/
+}
+
+.quienes-somos .container{
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative; /* Asegurar que el contenido está posicionado relativo para que no se superponga con la marca de agua */
+    z-index: 1; /* Asegurar que el contenido está por encima de la marca de agua */
+}
+
+/* Media query para dispositivos móviles con un ancho máximo de 600px */
+@media (max-width: 600px) {
+    .marca-agua {
+        width: 70%;
+    }
+}
+
+
+
+.origen {
+    background-color: rgb(255, 255, 255); /*cambia color de fondo*/
+    color: rgb(15, 15, 15);   /*color de la fuente*/
+    /* Permite que la sección se expanda más verticalmente */
+    min-height: 300px;
+
+    position: relative;
+    background-color: white;
+    color: black;
+    padding: 80px;/*mas grande el secction*/
+    width: 100vw; /* Ancho de la sección en viewport width */
+    text-align: center;
+    overflow: hidden; /* Evitar que la marca de agua desborde */
+
+}
+
+   /* Estilo de la marca de agua */
+   .marca-agua {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    opacity: 0.2; /* Ajusta la opacidad para mezclar la marca de agua */
+    pointer-events: none; /* Evitar que la imagen de la marca de agua sea interactiva */
+
+}
+
+.container {
+    max-width: 600px;   /*expande el txt en el section*/
+    margin: 0 auto; /*ajusta el margen cerca del nav*/
+    display: flex;
+    flex-direction: column; /*pone en columna para abajo el txt*/
+    align-items: center;
+}
+
+.origen h2 {
+    font-size: 30px;    /*agranda los titulos*/
+    font-weight: bold;  /*se hace negrita*/
+}
+
+.origen p {
+    font-size: 22px;   /*aranda el parrafo*/
+    font-weight: bold;  /*se hace negrita*/
+}
+
+/* Media query para dispositivos móviles con un ancho máximo de 600px */
+@media (max-width: 600px) {
+    .marca-agua {
+        width: 70%;
+    }
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    
+    .origen h2 {
+        font-size: 25px;    /*agranda los titulos*/
+        font-weight: bold;  /*se hace negrita*/
+    }
+    
+    .origen p {
+        font-size: 18px;   /*aranda el parrafo*/
+        font-weight: bold;  /*se hace negrita*/
+}
+
+}
+ /*fin de section de txt*/
+
+
+
+
+/*inicio de gallery*/
+
+
+.galeria-container {
+    background-color: #3483C3;   /*color morado de fondo*/
+    padding: 20px;
+}
+
+.galeria-titulo {
+    text-align: center;
+    color: #FFFFFF; /*txt blanco*/
+    margin-bottom: 20px;
+}
+
+.galeria-titulo h1 {
+    font-size: 40px;    /*tamano de titulo en galeria*/
+}
+
+.galeria-titulo p {
+    font-size: 25px;    /*tamano de p en galeria*/
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 fotos por fila */
+    gap: 10px; /*hace la separacion entre img*/
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;   /*maximo ancho de img*/
+    margin: 0 auto;
+    border: 4px solid transparent;  /*con transparent se hace transparente el borde*/
+    transition: border-color 0.3 ease-in-out;   /*transicion suave para el borde*/
+}
+
+.galeria img:hover {
+    border-color: #FFA500;  /*color que se muestra cuando el cursor pasa sobre la img*/
+}
+
+.galeria img:not(:hover) {
+    border-color: #FFFFFF;  /*marco blanco cuando no interactua la img*/
+}
+
+/*estilo responsiva en dispositivo movil*/
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr); /* 2 fotos por fila en dispositivos móviles */
+    }
+    
+    .galeria img {
+      max-width: 100%; /* Ajustar el tamaño de las imágenes al 100% del ancho */
+    }
+}
+/*fin de gallery*/
+
+/*parte de footer*/
+
+footer {
+    background-color: #A8A8A8;
+        border-top: 3px solid black;
+    text-align: center;
+    padding: 10px 0; /* Aumentamos el padding para hacer la sección más grande */
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);  /*hace la columna del footer de icons y los derechos reservados*/
+    gap: 10px;
+    align-items: center;
+    min-height: 200px; /* Agregamos una altura mínima para la sección */
+    
+}
+
+.footer-icons {
+    text-align: center;
+}
+
+.icon {
+    font-size: 40px; /*hace grande el icons*/
+    margin: 10px; /*separa los icons*/
+    color: #333;
+    /* Agregamos un efecto de sombra */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: color 0.3s, box-shadow 0.3s;
+}
+
+.icon:hover {
+    color: red; /* Cambiamos el color al pasar el cursor sobre los íconos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    font-size: 20px;
+}
+
+.rights {
+    grid-column: 3;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-icons {
+        text-align: center;
+    }
+
+    .rights {
+        grid-column: 1;
+    }
+}

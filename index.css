@@ -1,0 +1,628 @@
+*{
+    /*elementos no crecen mas de los que les indico*/
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;    /*para que se mueva con naturalidad entre pestanas*/
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+/*tamano de letra y lista*/
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+li{ font-size: 1.25em;}
+
+/*btn que esta en foto de bienvenida*/
+button{
+   
+    font-weight: bold;  /*negrita*/
+    padding: 10px 30px; /*tamano de arriba y abajo*/
+    border-radius: 90px; /*hacerlo sin bordes*/
+    border: 2px solid rgba(0, 0, 0, 0.3);   /*para que 2px sea grueso en los bordes*/
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);   /*porcicona x, y expancion en sombra y hacerlo transparente*/
+    color: white;   /*color d txt en btn*/
+    background-color: blueviolet;   /*color de fondo en btn*/
+}
+
+button:hover{
+    background-color: rgb(101, 33, 165); /*es el color que toma al poner raton sobre el btn*/
+
+}
+
+/*iniciamos estilo de container*/
+.container{
+    max-width: 1400px; /*ancho maximo*/
+    margin: auto;
+}
+
+/*ponerle como 2 color a letra de culto general*/
+.color-acento{color: blueviolet;}
+
+/*es para el menu de arriba*/
+header{
+    background-color:  #A8A8A8  ; /*el color de la section*/
+}
+
+/*El logo del header al inicio*/
+header .logo{
+    margin: 0;
+    padding: 25px 30px; /*tamano arriba y a los lados del logo*/
+    font-weight: bold; /*se hace negrita*/
+    color: rgb(83, 12, 150);
+    font-size: 1.6em; /*tamano del logo*/
+}
+
+/*para editar todo en general creo*/
+header .container{
+    display: flex;
+    flex-direction: column; /*se ordene en columna*/
+    align-items: center; /*alinea los contenidos*/
+}
+
+/*para editar el menu*/
+header nav{
+    display: flex;  /*hace que las parttes del nav se pongan en columna*/
+    flex-direction: column; /*se ordene en columna*/
+    text-align: center; /*alinea texto*/
+    padding-bottom: 25px;
+    
+    /*hace que nav sea fijo*/
+    position: sticky;
+    top: 0;
+}
+
+/*header a, es para seleccionar los links del menu*/
+header a{
+    padding: 5px 12px;
+    text-decoration: none; /*subrayado*/
+    font-weight: bold; /*negrita*/
+    color: black; /*color txt*/
+}
+
+header a:hover{
+    color: blueviolet; /*color al pasar eel raton sobrer el menu nav*/
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;/*altura en pantalla*/
+
+    
+    /*linear-gradient y todo eso es para hacer que la img tenga un filtro negro y asi ver la letra*/
+    background-image: linear-gradient(
+        0deg, 
+        rgba(0,0,0,0.5), 
+        rgba(0,0,0,0.5)
+        )
+        ,url("img/IMG24.jpg"); /*para que salga la img bajo la letra*/
+        
+        
+    background-repeat: no-repeat; /*para que no se repita la img*/
+
+    /*puedo quitarlo y hacer que solo se vea en pequeno sin problemas pero aja*/
+    background-size: cover; /*ocupe todo el espacio disponible*/
+    
+    background-position: center center; /*para centrar siempre la img */
+}
+
+#hero h1{
+    color: white; /*color de letra de bienvenidos al inicio de todo*/
+}
+
+/*tamano del primer btn contactanos*/
+#hero button{
+    font-size: 1.75em;
+}
+
+
+
+
+/*el estilo de esa seccion*/
+.culto-general {
+  background-color: #ffffffef; /* Fondo rojo */
+  color: black;
+  text-align: center;
+  padding: 20px 0; /* Ajustar el padding para hacer la section más pequeña */
+  height: 100vh; /* Cubre toda la pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90%; /* Ajustar el max-width para hacer la section más pequeña horizontalmente */
+  margin: 0 auto; /* Centra el contenido en dispositivos de escritorio */
+}
+
+.text-container {
+  flex-basis: 45%;
+  text-align: left; /* Alinea el texto a la izquierda */
+  text-align: center;
+}
+
+.text-container h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.text-container p {
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+
+.black-text {
+  color: #000; /* Texto negro */
+}
+.purple-text {
+  color: #800080; /* Texto morado */
+}
+
+.image-container {
+  flex-basis: 45%;
+  max-width: 60%; /* Ajustar tamaño de la imagen al 60% */
+  margin-top: 10px; /* Espacio entre el texto y la imagen */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+/* Estilos responsivos para móviles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .text-container, .image-container {
+    flex-basis: 100%;
+    max-width: 80%; /* Reducir el ancho para que se ajuste a la pantalla en móviles */
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-bottom: 10px; /* Espacio entre el h2 y el p */
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 20px; /* Espacio entre el p y la imagen */
+  }
+}
+
+
+
+
+
+
+/*parte de la carta*/
+#nuestros-horarios {
+    background-color: #3483C3 ;
+    padding: 10px 5px; /*hace que el sea largo y ancho*/
+    text-align: center;
+  }
+ 
+  
+  #nuestros-horarios .container {
+   /* display: flex;*/
+   /* flex-wrap: wrap;  /*hace que las card esten juntas o separadas*/
+    justify-content: center;
+
+  }
+  
+  #nuestros-horarios .container h2 {
+    color: #dad5d5;
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+
+  
+  #nuestros-horarios .card {
+    width: calc(33.33% - 5px);
+    margin: 15px; /*los hace sepadadors entre si*/
+    background-color: #fff; /*el color que tiene la parte donde sale el p*/
+    border-radius: 50px;  /*el radio de la card*/
+    box-shadow: 0 20px 6px rgba(0, 0, 0, 0.1); /*le hace el color con margen al rededor de la card*/
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+  
+  /*hace la transicion de salto de la card*/
+  #nuestros-horarios .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  #nuestros-horarios .card img {
+    width: 100%;  /*para cubir la img en toda la card*/
+    height: 300px;  /*hace la img mas grande para que se vea bien*/
+    object-fit: cover;
+    border-radius: 20px 20px 0 0; /*radio de la img*/
+    filter: brightness(70%);  /*este filter es de filtro en la img si se ve claro o mas oscuro o claro*/
+    position: relative;
+
+    /*este hace que la franja entre la img y el bofer se vea*/
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  #nuestros-horarios .card .content {
+    /*tamano del content en donde sale el p*/
+    padding: 35px;
+    text-align: center;
+  }
+   
+
+  /*la parte donde va titulo en card*/
+  #nuestros-horarios .card h3 {
+    color: #ffffff;
+    font-size: 20px;  /*tamano del txt en h3*/
+    text-align: center;
+
+    /*es la posicion del sombreado*/
+    margin: 0px 0;
+
+    /*este hace sombreado ala letra del titulo*/
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    
+    /*este hace que el sombreado del titulo este top=abajo  left=derecha  right=izquierda*/
+    top: 0;
+    left: 0;
+    right: 0;
+
+    /*el color del sombreado*/
+    background-color: rgba(0, 0, 0, 0.5);
+
+    /*ese padding es para ver si se cubre toda la img con sombreado*/
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    z-index: 1;
+  }
+  
+  /*ajuste del p de la card*/
+  #nuestros-horarios .card p {
+    font-size: 25px;
+    color: #141414;
+    text-align: center;
+    font-weight: bold;  /*se hace negrita*/
+
+    /*margen de la parte donde va p para hacer mas largo para abajo*/
+    margin: 15px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /*se hace la linea donde esta el p de la card */
+  #nuestros-horarios .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /*para el color del before en la card*/
+    background: linear-gradient(rgb(90, 85, 85), rgba(0, 0, 0, 0.5));
+    z-index: 0;
+  }
+  
+
+/*fin de card*/
+
+
+
+#asiste{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #5E96B8 ; /*hace que el section tome el color de fondo negro*/
+    color: #FFFFFF;
+    height: 80vh; /*altura en pantalla*/
+}
+
+#asiste h2{
+    font-size: 9vw;
+}
+
+#asiste button{
+    font-size: 5vw;
+}
+
+
+
+/*estilo para escritorio
+osea para que se vea bien en pc*/
+
+@media(min-width: 850px) {
+
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #hero h1{
+        font-size: 5em;
+    }
+
+
+    /*la parte de culto general*/
+    #culto-general .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #culto-general .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #culto-general h2{
+        margin-top: 0px;
+    }
+
+    #culto-general .img-container{
+        background-image: url("img/IMG4.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 3200px;
+    }
+
+     /*la parte de nuestros horarios*/
+    
+
+     #nuestros-horarios .horas{
+        display: flex;
+        justify-content: center;
+    }
+
+    #nuestros-horarios p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #nuestros-horarios h2{
+        font-size: 4em;
+    }
+
+    #nuestros-horarios h3{
+        margin-top: 0;
+    }
+
+
+    /*la parte de asiste la del btn*/
+    #asiste h2{
+        font-size: 5em;
+    }
+    
+    #asiste button{
+        font-size: 2em;
+    }
+    
+   
+    
+    }
+    
+   
+
+    /*partes de card*/
+    /*tamano para movil*/
+
+    @media (max-width: 1200px) {
+        /*tamano de card a lo ancho en movil*/
+        #nuestros-horarios .card {
+          width: 100%;
+        }
+        
+        #nuestros-horarios .card .content {
+          display: block;
+        }
+        
+        /*tamano de ancho movil*/
+        #nuestros-horarios .container {
+          padding: 20px 30px;
+          
+          flex-wrap: wrap;  /*hace que las card esten juntas o separadas*/
+          
+        }
+  
+        /*tamano de p en card*/
+        #nuestros-horarios .card p {
+          font-size: 18px;
+        }
+  
+      }
+      
+      /*tamano de ordenador*/
+      @media (min-width: 850px) {
+        #nuestros-horarios .card {
+          width: calc(33.33% - 20px);
+        }
+        
+        /*tamano de card a lo ancho en ordenador*/
+        #nuestros-horarios .container {
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        
+        #nuestros-horarios .card .content {
+          display: block;
+        }
+        
+        /*tamano de p en card*/
+        #nuestros-horarios .card p {
+          font-size: 20px;
+        }
+        
+    }
+    /*partes de card*/
+
+
+
+    /*parte de footer*/
+
+footer {
+  background-color: #A8A8A8;
+  border-top: 3px solid black;
+    text-align: center;
+    padding: 10px 0; /* Aumentamos el padding para hacer la sección más grande */
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);  /*hace la columna del footer de icons y los derechos reservados*/
+    gap: 10px;
+    align-items: center;
+    min-height: 200px; /* Agregamos una altura mínima para la sección */
+    
+}
+
+.footer-icons {
+    text-align: center;
+}
+
+.icon {
+    font-size: 40px; /*hace grande el icons*/
+    margin: 10px; /*separa los icons*/
+    color: #333;
+    /* Agregamos un efecto de sombra */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: color 0.3s, box-shadow 0.3s;
+}
+
+.icon:hover {
+    color: red; /* Cambiamos el color al pasar el cursor sobre los íconos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    font-size: 20px;
+}
+
+.rights {
+    grid-column: 3;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-icons {
+        text-align: center;
+    }
+
+    .rights {
+        grid-column: 1;
+    }
+}
+
+
+/*parte de eventos proximos*/
+/* Estilos para la sección con clase "proximos" */
+.proximos {
+    background-color: #f5f5f5; /* Color naranja para el fondo */
+    padding: 20px;
+    text-align: center;
+    color: #000000; /* Texto en color blanco */
+  }
+  
+  /* Estilos para el contenedor con clase "container" */
+  .containerr {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Estilos para el contenedor con clase "carousel" */
+  .carousel {
+    display: flex;
+    overflow-x: auto; /* Barra de desplazamiento horizontal */
+    scrollbar-width: none; /* Oculta la barra de desplazamiento */
+    -ms-overflow-style: none; /* Oculta la barra de desplazamiento en Edge */
+    scroll-snap-type: x mandatory; /* Hace que se muestre una card completa a la vez */
+  }
+  
+  /* Estilos para las cards con clase "card" */
+  .cart {
+    background-color: #000; /* Fondo negro para cada card */
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    flex: 0 0 500px; /* Tamaño fijo para cada card (mayor tamaño) */
+    scroll-snap-align: start; /* Alinea las cards al desplazar */
+    position: relative; /* Posición relativa para las cards */
+  }
+  
+  /* Estilos para la imagen dentro de la card */
+  .cart img {
+    width: 100%; /* Ajusta la imagen al tamaño de la card */
+    height: 300px; /* Altura fija para la imagen (mayor tamaño) */
+    object-fit: cover; /* Ajusta la imagen manteniendo la proporción */
+    border-radius: 8px;
+  }
+  
+  /* Estilos para los textos dentro de la card */
+  .cart h3, .cart p {
+    color: #fff; /* Texto en color blanco */
+  }
+
+
+  @media only screen and (max-width: 768px) {
+    /* Estilos para dispositivos móviles */
+    .carousel {
+      flex-wrap: nowrap; /* Deshabilita el ajuste de línea en dispositivos móviles */
+    }
+  
+    .cart {
+      flex: 0 0 400px; /* Tamaño fijo para cada card en dispositivos móviles */
+    }
+  
+    .cart img {
+      height: 250px; /* Altura fija para la imagen en dispositivos móviles */
+      width: 100%; /* Ajusta la imagen al tamaño de la card */
+    }
+  }
+
+  /*fin de la parte de eventos proximos*/
