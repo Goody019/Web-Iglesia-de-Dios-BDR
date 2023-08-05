@@ -97,7 +97,7 @@ header a:hover{
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    height: 90vh;/*altura en pantalla*/
+    height: 70vh;/*altura en pantalla*/
 
     
     /*linear-gradient y todo eso es para hacer que la img tenga un filtro negro y asi ver la letra*/
@@ -616,7 +616,7 @@ p {
     }
   
     .cart {
-      flex: 0 0 400px; /* Tamaño fijo para cada card en dispositivos móviles */
+      flex: 0 0 300px; /* Tamaño fijo para cada card en dispositivos móviles */
     }
   
     .cart img {
