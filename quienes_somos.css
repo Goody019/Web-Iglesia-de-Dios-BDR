@@ -174,7 +174,7 @@ osea para que se vea bien en pc*/
     }
 
     .card {
-      width: 90%;
+      width: 70%;
       padding: 10px; /* Ajustamos el padding en móvil */
     }
 
@@ -237,6 +237,16 @@ osea para que se vea bien en pc*/
     .marca-agua {
         width: 70%;
     }
+
+    .quienes-somos h2{
+    font-size: 20px;
+    font-weight: bold;  /*se hace negrita*/
+}
+
+.quienes-somos p{
+    font-size: 12px;
+    font-weight: bold;  /*se hace negrita*/
+}
 }
 
 
@@ -303,12 +313,12 @@ osea para que se vea bien en pc*/
 
     
     .origen h2 {
-        font-size: 25px;    /*agranda los titulos*/
+        font-size: 20px;    /*agranda los titulos*/
         font-weight: bold;  /*se hace negrita*/
     }
     
     .origen p {
-        font-size: 18px;   /*aranda el parrafo*/
+        font-size: 12px;   /*aranda el parrafo*/
         font-weight: bold;  /*se hace negrita*/
 }
 
