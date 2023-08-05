@@ -167,14 +167,14 @@ osea para que se vea bien en pc*/
     }
 
     .card img {
-      width: 150px; /* Reducimos el ancho de la imagen en móvil */
-      height: 150px; /* Reducimos el alto de la imagen en móvil */
+      width: 120px; /* Reducimos el ancho de la imagen en móvil */
+      height: 200px; /* Reducimos el alto de la imagen en móvil */
       margin-right: 0;
       margin-bottom: 10px; /* Ajustamos el margen inferior de la imagen en móvil */
     }
 
     .card {
-      width: 70%;
+      width: 90%;
       padding: 10px; /* Ajustamos el padding en móvil */
     }
 
@@ -184,7 +184,7 @@ osea para que se vea bien en pc*/
     }
 
     .card-content p {
-      font-size: 14px; /* Reducimos el tamaño de la fuente en móvil */
+      font-size: 12px; /* Reducimos el tamaño de la fuente en móvil */
     }
   }
 
