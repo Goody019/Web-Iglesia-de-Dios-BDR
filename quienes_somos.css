@@ -159,6 +159,7 @@ osea para que se vea bien en pc*/
   }
 
   @media (max-width: 768px) {
+   
     .pastores-generales {
       flex-direction: column;
       height: auto;
@@ -172,19 +173,19 @@ osea para que se vea bien en pc*/
     }
 
     .card {
-      width: 90%;
+      width: 100%;
       padding: 10px; /* Ajustamos el padding en móvil */
     }
 
     .card-content h2 {
-      font-size: 20px; /* Reducimos el tamaño de la fuente en móvil */
+      font-size: 18px; /* Reducimos el tamaño de la fuente en móvil */
       margin-bottom: 5px; /* Ajustamos el margen inferior en móvil */
     }
 
     .card-content p {
-      font-size: 14px; /* Reducimos el tamaño de la fuente en móvil */
+      font-size: 13px; /* Reducimos el tamaño de la fuente en móvil */
     }
-  } 
+  }
 
 
  .quienes-somos {
